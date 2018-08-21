@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Assignment</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("#hidebtn").click(function(){
+            $("#disappeartxt").hide()
+        })
+        $("#showbtn").click(function(){
+            $("#disappeartxt").show()
+        })
+
+        $("#togglebtn").click(function(){
+            $("#toggletxt").toggle()
+        })
+
+
+        $("#slideupbtn").click(function(){
+            $("#slidetxt").slideUp()
+        })
+        $("#slidedownbtn").click(function(){
+            $("#slidetxt").slideDown()
+        })
+
+        $("#slidetogglebtn").click(function(){
+            $("#slidetoggletxt").slideToggle()
+        })
+
+        $("#fadeoutbtn").click(function(){
+            $("#fadetxt").fadeOut()
+        })
+        $("#fadeinbtn").click(function(){
+            $("#fadetxt").fadeIn()
+        })
+
+        $("#beforebtn").click(function(){
+            $("#randomtxt").before("hello")
+        })
+        $("#afterbtn").click(function(){
+            $("#randomtxt").after("hello")
+        })
+
+        $("#appendbtn").click(function(){
+            $("#appendtxt").append("hello")
+        })
+
+        $("#htmlbtn").click(function(){
+            $("p").html("I'm changing all of the p elements!")
+        })
+
+        $("#attrimg").hover(function(){
+            $("#attrimg").attr("width", "50px" )
+        })
+
+        $("#valtxtbox").keyup(function(){
+            var value = $(this).val();
+            $("#valtxt").text(value);
+        })
+    })
+    
+    
+    </script>
+</head>
+<body>
+    <h1>jQuery Practice</h1>
+
+    <div class="boxes">
+        <h2>.hide/.show</h2>
+        <button id="hidebtn">.hide</button>
+        <button id="showbtn">.show</button>
+        <p id="disappeartxt">Click the .hide button to hide this paragraph! Click the .show button to show this paragraph.</p>
+    </div>
+    <div class="boxes">
+        <h2>.toggle</h2>
+        <button id="togglebtn">.toggle</button>
+        <p id="toggletxt">Click the .toggle button to toggle between the .hide and .show functions!</p>
+    </div>
+    <div class="boxes">
+        <h2>.slideDown/.slideUp</h2>
+        <button id="slideupbtn">.slideUp</button>        
+        <button id="slidedownbtn">.slideDown()</button>
+        <p id="slidetxt">Click the .slideDown button to slide the text down</p>
+    </div>
+    <div class="boxes">
+        <h2>.slideToggle</h2>
+        <button id="slidetogglebtn">.slideToggle</button>
+            <p id="slidetoggletxt">Click the .slideToggle button to display or hide matched elements with a sliding motion</p>
+    </div>
+    <div class="boxes">
+        <h2>.fadeIn/.fadeOut</h2>
+        <button id="fadeinbtn">.fadeIn</button>
+        <button id="fadeoutbtn">.fadeOut</button>
+        <p id="fadetxt">Display the matched elements by fading them to opaque or hide the matched elements by fading them to transparent</p>
+    </div>
+    <div class="boxes">
+        <h2>.before/.after</h2>
+        <button id="beforebtn">.before</button>
+        <button id="afterbtn">.after</button>
+        <p id="randomtxt">Insert content specified by the parameters after/before each element in the set of matched elements</p>
+    </div>
+    <div class="boxes">
+        <h2>.append</h2>
+        <button id="appendbtn">Append</button>
+        <p id="appendtxt">Insert content, specified by the parameter, to the end of each element in the set of matched elements</p>
+    </div>
+    <div class="boxes">
+        <h2>.html</h2>
+        <button id="htmlbtn">.html</button>
+        <p id="htmltxt">Get the HTML contents of the first element in the set of matched elements or set the HTML contents of every matched element.</p>
+    </div>
+    <div class="imgbox">
+        <img width="150px" id="attrimg" src="https://pbs.twimg.com/profile_images/446566229210181632/2IeTff-V_400x400.jpeg" alt="Cute Puppy!">
+        <h2 id="attrtitle">.attr</h2>
+        <p id="attrtxt">Hover over the picture to change the size of the picture</p>
+    </div>
+    <div class="boxes">
+        <h2>.val/.text</h2>
+        <input type="text" id="valtxtbox">
+        <p id="valtxt"></p>
+    </div>
+    
+</body>
+</html>
